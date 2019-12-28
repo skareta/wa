@@ -1,7 +1,10 @@
+@import "./variables.scss";
+
 .grid {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  align-items: flex-start;
   align-items: flex-start;
 }
 
@@ -15,5 +18,34 @@ $col-size: 100% / 12;
 @for $i from 1 through $total-cols {
   .col-#{$i} {
     width: $col-size * $i;
+  }
+}
+
+@media screen and (max-width: $screen-lg - 1px) {
+  @for $i from 1 through $total-cols {
+    .col-lg-#{$i} {
+      width: $col-size * $i;
+    }
+  }
+}
+@media screen and (max-width: $screen-xl - 1px) {
+  @for $i from 1 through $total-cols {
+    .col-md-#{$i} {
+      width: $col-size * $i;
+    }
+  }
+}
+@media screen and (max-width: $screen-md - 1px) {
+  @for $i from 1 through $total-cols {
+    .col-sm-#{$i} {
+      width: $col-size * $i;
+    }
+  }
+}
+@media screen and (max-width: $screen-sm - 1px) {
+  @for $i from 1 through $total-cols {
+    .col-xs-#{$i} {
+      width: $col-size * $i;
+    }
   }
 }
