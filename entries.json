@@ -13,5 +13,14 @@
   ],
   "lesson_9_hw": [
     "./src/lesson_9_hw/lesson_9_hw.js"
+  ],
+  "admin_login": [
+    "./src/admin_login/admin_login.js"
+  ],
+  "input_number": [
+    "./src/input_number/input_number.js"
+  ],
+  "string_hello": [
+    "./src/string_hello/string_hello.js"
   ]
 }

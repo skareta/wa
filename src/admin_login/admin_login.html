@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://localhost:35729/livereload.js"></script>
+    <title key="title"></title>
+  </head>
+  <body>
+    <div id="hello-user"></div>
+    <script>
+      let helloBlock = document.getElementById("hello-user");
+      let userName = prompt("Enter Your Name", "");
+      let password = prompt("Enter Password", "");
+      if (userName === "Admin" && password === "Admin") {
+        helloBlock.innerHTML = "<h2> Hello " + userName + "!</h2>";
+        console.log("True: UserName and Password are correct");
+      } else {
+        alert("User Name or Password is incorrect!");
+        console.log("False: UserName and Password are correct");
+      }
+      console.log("END");
+    </script>
+  </body>
+</html>
