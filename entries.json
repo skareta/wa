@@ -22,5 +22,8 @@
   ],
   "string_hello": [
     "./src/string_hello/string_hello.js"
+  ],
+  "strings": [
+    "./src/strings/strings.js"
   ]
 }

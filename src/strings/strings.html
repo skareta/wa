@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://localhost:35729/livereload.js"></script>
+    <title key="title"></title>
+  </head>
+  <body>
+    <script>
+      let string_hello = "Hello";
+      let new_string_hello = "";
+      for (let i = 0; i < string_hello.length; i++) {
+        new_string_hello = new_string_hello + "*";
+      }
+      console.log(new_string_hello);
+      let string_test = "TEST";
+      let new_string_test = "";
+      for (let j = string_test.length - 1; j >= 0; j--) {
+        new_string_test = new_string_test + string_test[j];
+      }
+      console.log(new_string_test);
+      let input_string = "";
+      let counter = 0;
+      input_string = prompt("Enter String", "");
+      input_string = input_string.toLowerCase();
+      if (input_string == "" || input_string == null) {
+        alert("Enter String");
+      } else {
+        for (let i = 0; i < input_string.length; i++) {
+          if (
+            input_string[i] === "e" ||
+            input_string[i] === "y" ||
+            input_string[i] === "u" ||
+            input_string[i] === "i" ||
+            input_string[i] === "o" ||
+            input_string[i] === "a"
+          ) {
+            counter++;
+          }
+        }
+      }
+      console.log(counter);
+    </script>
+  </body>
+</html>
