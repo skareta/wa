@@ -25,5 +25,8 @@
   ],
   "strings": [
     "./src/strings/strings.js"
+  ],
+  "hw_6": [
+    "./src/hw_6/hw_6.js"
   ]
 }
