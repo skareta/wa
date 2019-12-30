@@ -3,19 +3,19 @@
   padding: 0.5rem;
 }
 
-.item__content {
+.item-content {
   height: 100%;
   position: relative;
 }
 
-.item__icon {
+.item-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.item__title {
+.item-title {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -23,6 +23,6 @@
   color: #fff;
 }
 
-.item:nth-child(1) .item__content {
+.item:nth-child(1) .item-content {
   background: #3387ea;
 }
