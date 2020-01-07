@@ -28,5 +28,8 @@
   ],
   "hw_6": [
     "./src/hw_6/hw_6.js"
+  ],
+  "game": [
+    "./src/game/game.js"
   ]
 }
