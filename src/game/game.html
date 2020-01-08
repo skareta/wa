@@ -11,6 +11,76 @@
     <title key="title"></title>
   </head>
   <body>
-    <script src="../common/scripts/game.js"></script>
+    <!-- <script src="../common/scripts/game.js"></script> -->
+    <script>
+      let userName = prompt("What's your name?");
+      let playAgain = "";
+      alert("Hello, " + userName + ". Let's play the game");
+
+      let words = ["name"];
+      //play:
+      let word = words[Math.floor(Math.random() * words.length)].toUpperCase();
+
+      let answerArray = [];
+      let lettersFound = [];
+      for (let i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+      }
+      let remainingLetters = word.length;
+      outer_loop: while (remainingLetters > 0) {
+        // Основной код
+        // Показываем состояние игры
+        // Запрашиваем вариант ответа
+        // Обновляем answerArray и remainingLetters для каждого
+        // вхождения угаданной буквы
+
+        alert(
+          "Guess the word\n" +
+            "Remaining " +
+            remainingLetters +
+            " letters\n" +
+            answerArray.join(" ").toUpperCase()
+        );
+        let guess = prompt(
+          "Enter letter or click 'Cancel' to quit"
+        ).toUpperCase();
+        if (guess === null) {
+          break outer_loop;
+        } else if (guess.length === 0) {
+          alert("Please type a letter");
+        } else if (guess.length !== 1) {
+          alert("Please add only one letter");
+        } else {
+          // Обновляем состояние игры
+          let counter = 0;
+          for (let j = 0; j < word.length; j++) {
+            if (word[j] === guess) {
+              lettersFound.push(guess);
+              //need to add logic to avoid considering letters already found
+              answerArray[j] = guess;
+              remainingLetters--;
+              counter++;
+            }
+          }
+          if (counter === 0) {
+            alert("There is no such letter in the searching word. Try again");
+          }
+        }
+      }
+      // alert(answerArray.join(" "));
+      if (remainingLetters === 0) {
+        alert(
+          "Well done, " + userName + "! The word is: " + word.toUpperCase()
+        );
+      } else {
+        alert("Attempt failed. Game is over");
+      }
+      playAgain = confirm("Let's play one more time???");
+      if (playAgain === true) {
+        //break play;
+      } else {
+        alert("Goodbye");
+      }
+    </script>
   </body>
 </html>
