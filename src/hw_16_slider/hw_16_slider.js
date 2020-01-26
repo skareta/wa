@@ -1,0 +1,1 @@
+import './hw_16_slider.css';

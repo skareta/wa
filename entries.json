@@ -43,5 +43,8 @@
   ],
   "lesson_16": [
     "./src/lesson_16/lesson_16.js"
+  ],
+  "hw_16_slider": [
+    "./src/hw_16_slider/hw_16_slider.js"
   ]
 }
